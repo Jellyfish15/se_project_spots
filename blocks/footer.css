@@ -1,4 +1,8 @@
-.footer__text {
-font-family: Poppins;
+.footer {
+display:flex;
+justify-content: center;
+max-width: 100%;
 }
-
+.footer__copyright {
+margin: 30px;
+}
