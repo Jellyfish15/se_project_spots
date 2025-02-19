@@ -1,8 +1,23 @@
 .footer {
-display:flex;
+display: flex;
 justify-content: center;
-max-width: 100%;
 }
+
 .footer__copyright {
-margin: 30px;
+margin: 60px 60px;
+color: rgba(21, 21, 21, 0.7) solid;
+font-size: 16px;
+font-weight: 400;
+line-height: 1;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+}
+
+@media screen and(max-width: 627px){
+.footer {
+    max-width: 288px;
+    margin: 0;
+}
+
 }
