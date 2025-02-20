@@ -36,6 +36,7 @@
   margin: 0;
   font-size: 16px;
   line-height: 1;
+  font-weight: 500;
   text-overflow: ellipsis;
   overflow: hidden;
   line-clamp: 3;
@@ -49,11 +50,12 @@
 
 .profile__edit-btn {
   margin-top: auto;
-  background-color: #fCF5e5;
+  background-color: transparent;
   border: none;
   margin-right: auto;
   font-size: 16px;
   line-height: 1;
+  font-weight: 500;
   display: flex;
   gap: 8px;
   color: #212121;
@@ -62,7 +64,6 @@
 }
 
 .profile__edit-btn:hover {
-color: #212121;
 cursor: pointer;
 opacity: 100%;
 
@@ -72,7 +73,7 @@ opacity: 100%;
   margin-left: auto;
   margin-top: auto;
   background-color: #212121;
-  color: white;
+  color: #FCF5E5;
   border-radius: 8px;
   width: 149px;
   height: 52px;
@@ -84,11 +85,12 @@ opacity: 100%;
   font-size: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: background-color 0.5s;
+  transition: opacity 0.5s;
+  border: none;
 }
 
 .profile__add-btn:hover {
-  background-color: rgba(21, 21, 21, 0.8);
+  opacity: 80%;
   cursor: pointer;
 }
 
