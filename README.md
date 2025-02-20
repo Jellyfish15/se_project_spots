@@ -15,7 +15,7 @@ This design is made so all the elements are displayed effectively on popular scr
 
 **Deployment**
 
-For the deployment location [Follow this link](https://github.com/Jellyfish15/se_project_spots)
+For the deployment location [Follow this link](https://jellyfish15.github.io/se_project_spots/)
 
 
 **Video**
