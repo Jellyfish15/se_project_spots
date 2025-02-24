@@ -108,6 +108,7 @@
             </li>
           </ul>
         </section>
+
       </main>
 
       <footer class="footer page__section">
@@ -115,6 +116,25 @@
           &copy; 2025 Gennadiy Strelkov
         </div>
       </footer>
+      <div class="modal modal_opened">
+        <div class="modal__container">
+          <button type="submit" class="modal__close-btn">
+            <img class="modal__close-btn_image" src="./images/x_icon.svg">
+          </button>
+          <h2 class="modal__title">Edit profile</h2>
+          <form name="edit-profile" class="modal__form">
+            <label for="name" class="modal__label">
+              Name
+              <input id="name" type="text" class="modal__input" placeholder="Type your name"/>
+            </label>
+            <label for="description" class="modal__label">
+              Description
+              <input id="description" type="text" class="modal__input" placeholder="Describe yourself"/>
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script defer src="./scripts/index.js"></script>
   </body>
