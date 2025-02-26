@@ -58,7 +58,7 @@
   display: flex;
   gap: 8px;
   color: #212121;
-  transition: color 0.3;
+  transition: opacity 0.3;
   opacity: 80%;
 }
 
