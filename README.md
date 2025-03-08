@@ -13,6 +13,10 @@ This design is made so all the elements are displayed effectively on popular scr
 - Responsive Design
 - Javascript
 
+**Images**
+
+To see features of this project take a look at some of these [Images](https://drive.google.com/drive/folders/1BeZe7HS-JOLOahJ_tl_85KMJ5t9kKyTE?usp=drive_link)
+
 **Deployment**
 
 For the deployment location [Follow this link](https://jellyfish15.github.io/se_project_spots/)
