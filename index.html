@@ -39,24 +39,14 @@
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
-                <button
-                type="button"
-                class="card__delete-btn ">
-                  <img
-                  src=""
-                  alt=""
-                  />
+                <button type="button" class="card__delete-btn">
+                  <img src="" alt="" />
                 </button>
-            <img
-            src=""
-            alt=""
-            class="card__image "
-                />
+                <img src="" alt="" class="card__image" />
 
                 <div class="card__content">
                   <h2 class="card__title"></h2>
-                  <button type="button"
-                  class="card__like-btn"></button>
+                  <button type="button" class="card__like-btn"></button>
                 </div>
               </li>
             </template>
@@ -104,9 +94,7 @@
 
       <div class="modal" id="add-card-modal">
         <div class="modal__container">
-          <button
-          type="button"
-          class="modal__close-btn">
+          <button type="button" class="modal__close-btn">
             <img
               class="modal__close-image"
               src="./images/x_icon.svg"
@@ -141,20 +129,16 @@
       </div>
     </div>
 
-  <div class="modal"
-  id="preview-modal">
-    <div class="modal__content modal__content_type_preview">
-      <button
-      class="modal__close-btn modal__close_type_preview"
-      type="button"></button>
-        <img
-      src=""
-      alt=""
-      class="modal__image"
-      />
-      <p class="modal__caption"></p>
+    <div class="modal" id="preview-modal">
+      <div class="modal__content modal__content_type_preview">
+        <button
+          class="modal__close-btn modal__close-btn_type_preview"
+          type="button"
+        ></button>
+        <img src="" alt="" class="modal__image" />
+        <p class="modal__caption"></p>
+      </div>
     </div>
-  </div>
     <script defer src="./scripts/index.js"></script>
   </body>
 </html>
