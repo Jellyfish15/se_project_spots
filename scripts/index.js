@@ -1,3 +1,6 @@
+
+import { resetValidation } from './validation.js';
+
 const initialCards = [
   {
     name: 'Val Thorens',
@@ -68,10 +71,12 @@ const cardsList = document.querySelector('.cards__list');
 
 function openModal(modal) {
   modal.classList.add('modal_opened');
+  document.addEventListener('keydown', handleEscapeKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove('modal_opened');
+  document.removeEventListener('keydown', handleEscapeKey);
 }
 
 function handleEditFormSubmit(evt) {
@@ -129,11 +134,9 @@ function getCardElement(data) {
 profileEditbutton.addEventListener('click', () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(editFormElement, editModalNameInput, editModalDescriptionInput);
   openModal(editModal);
 });
-
-editModalNameInput.value = profileName.textContent;
-editModalDescriptionInput.value = profileDescription.textContent;
 
 editModalCloseBtn.addEventListener('click', () => {
   closeModal(editModal);
@@ -180,6 +183,7 @@ function handleEscapeKey(evt) {
     }
   }
 }
+
 
 document.addEventListener('keydown', handleEscapeKey);
 

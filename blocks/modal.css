@@ -16,6 +16,7 @@
   transition: visibility 0s linear 0.5s, opacity 0.5s linear;
 }
 
+
 .modal__container {
   background: #fff;
   padding: 32px 50px;
@@ -125,12 +126,12 @@
   cursor: pointer;
 }
 
-.button_disabled {
+.modal__submit-btn_disabled {
   opacity: 50%;
   cursor: not-allowed;
 }
 
-.button_disabled:hover {
+.modal__submit-btn-disabled:hover {
   opacity: 50%;
   cursor: not-allowed;
 }
