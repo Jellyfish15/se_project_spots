@@ -1,5 +1,5 @@
 
-import { resetValidation } from './validation.js';
+import { resetValidation, disableButton, settings } from './validation.js';
 
 const initialCards = [
   {
