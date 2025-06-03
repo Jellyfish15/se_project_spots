@@ -74,6 +74,8 @@ api.getAppInfo().then(([cards, userInfo]) => {
   console.log(userInfo);
 
   avatarImageSrc.src = userInfo.avatar;
+  profileName.textContent = userInfo.name;
+  profileDescription.textContent = userInfo.about;
 
 })
   .catch((err) => {
@@ -149,6 +151,7 @@ function handleEditFormSubmit(evt) {
   // disable the button
   api.editUserInfo({ name: editModalNameInput.value, about: editModalDescriptionInput.value })
     .then((data) => {
+      console.log(data);
       profileName.textContent = data.name;
       profileDescription.textContent = data.about;
       closeModal(editModal);
@@ -194,7 +197,6 @@ function handleAvatarSubmit(evt) {
 
   const avatarSubmitBtn = evt.submitter;
 
-  avatarSubmitBtn.textContent = 'Saving...';
   setButtonText(avatarSubmitBtn, true, "Save", "Saving...");
 
   console.log(avatarInput.value);
@@ -207,14 +209,15 @@ function handleAvatarSubmit(evt) {
       // const avatarImageSrc = document.getElementById("profile-avatar");
       avatarImageSrc.src = data.avatar;
       closeModal(avatarModal);
+      evt.target.reset();
+  disableButton(avatarSubmitBtn, settings);
     })
     .catch(console.error)
     .finally(() => {
 
-      avatarSubmitBtn.textContent = "Save";
+      setButtonText(editModalSubmitBtn,false);
     });
-  evt.target.reset();
-  disableButton(avatarSubmitBtn, settings);
+  
 }
 
 
@@ -282,6 +285,9 @@ function getCardElement(data) {
     handleCardDelete(cardElement, data);
   });
 
+  if (data.isLiked) {
+    cardLikeBtn.classList.add('card__like-btn_liked');
+  }
   function handleCardDelete(cardElement, cardId) {
     selectedCard = cardElement;
     selectedCardId = cardId;
@@ -385,9 +391,6 @@ function handleEscapeKey(evt) {
     }
   }
 }
-
-
-document.addEventListener('keydown', handleEscapeKey);
 
 
 enableValidation(settings);
