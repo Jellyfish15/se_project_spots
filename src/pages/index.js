@@ -145,7 +145,6 @@ function handleEditFormSubmit(evt) {
   // editModalSubmitBtn.textContent = 'Saving...';
   // change text content to "Saving..."
   const editModalSubmitBtn = evt.submitter;
-  editModalSubmitBtn.textContent = 'Saving...';
 
   setButtonText(editModalSubmitBtn, true, "Save", "Saving...");
   // disable the button
@@ -158,9 +157,8 @@ function handleEditFormSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-
-      // todo - call setButtonText instead
-      editModalSubmitBtn.textContent = "Save";
+    setButtonText(editModalSubmitBtn, false);
+    
     });
 }
 
@@ -170,7 +168,6 @@ function handleAddCardFormSubmit(evt) {
   evt.preventDefault();
 
   const addCardModalSubmitBtn = evt.submitter;
-  addCardModalSubmitBtn.textContent = 'Saving...';
   setButtonText(addCardModalSubmitBtn, true, "Save", "Saving...");
 
   const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
@@ -185,7 +182,7 @@ function handleAddCardFormSubmit(evt) {
     }).catch(console.error)
     .finally(() => {
 
-      addCardModalSubmitBtn.textContent = "Save";
+setButtonText(editModalSubmitBtn, false);
     });
   disableButton(cardSubmitBtn, settings);
   closeModal(cardModal);
