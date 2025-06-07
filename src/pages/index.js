@@ -157,8 +157,8 @@ function handleEditFormSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-    setButtonText(editModalSubmitBtn, false);
-    
+      setButtonText(editModalSubmitBtn, false);
+
     });
 }
 
@@ -179,13 +179,13 @@ function handleAddCardFormSubmit(evt) {
       const cardElement = getCardElement(data);
       cardsList.prepend(cardElement);
       evt.target.reset();
+      disableButton(cardSubmitBtn, settings);
+      closeModal(cardModal);
     }).catch(console.error)
     .finally(() => {
-
-setButtonText(editModalSubmitBtn, false);
+      setButtonText(addCardModalSubmitBtn, false);
     });
-  disableButton(cardSubmitBtn, settings);
-  closeModal(cardModal);
+
 
 }
 
@@ -207,14 +207,14 @@ function handleAvatarSubmit(evt) {
       avatarImageSrc.src = data.avatar;
       closeModal(avatarModal);
       evt.target.reset();
-  disableButton(avatarSubmitBtn, settings);
+      disableButton(avatarSubmitBtn, settings);
     })
     .catch(console.error)
     .finally(() => {
 
-      setButtonText(editModalSubmitBtn,false);
+      setButtonText(editModalSubmitBtn, false);
     });
-  
+
 }
 
 
