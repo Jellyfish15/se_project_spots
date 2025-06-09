@@ -212,7 +212,7 @@ function handleAvatarSubmit(evt) {
     .catch(console.error)
     .finally(() => {
 
-      setButtonText(editModalSubmitBtn, false);
+      setButtonText(avatarSubmitBtn, false);
     });
 
 }
